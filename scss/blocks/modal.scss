@@ -1,0 +1,88 @@
+$modal-background-color: #fff;
+
+.modal {
+    position: fixed;
+    background: $modal-background-color;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    top: 0;
+    right: 0;
+    transition: transform 0.2s;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    display: flex;
+    gap: 32px;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 10px 0px 30px rgba(14, 24, 80, 0.2);
+
+    @media (min-width: 1440px) { 
+        max-width: 513px;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        gap: 32px;
+        box-shadow: none;
+    }
+  
+    &--active {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        z-index: 999;
+    }
+    
+    &--button{
+        height: auto;
+        padding-top: 24px;
+        padding-left: 16px;
+
+        @media (min-width: 1440px) { 
+            height: auto;
+            padding-top: 32px;
+            padding-left: 0;
+        }
+    }
+    
+    &--about {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        max-width: 320px;
+        box-shadow: none;
+        height: 100%;
+
+        @media (min-width: 1440px) { 
+            max-width: 440px;
+            box-shadow: none;
+            padding-top: 0;
+            height: 100%;
+            padding-top: 32px;
+            box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        }
+    }
+    
+    &__close {
+        background: url('../img/burger-close.svg') no-repeat 0 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+    
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+    }
+}

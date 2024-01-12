@@ -1,0 +1,21 @@
+$container-color: #F8F8F8;
+
+.container {
+	margin: 0 auto;
+	min-width: 320px;
+	background-color: $container-color;
+	overflow-x: hidden;
+	max-width: 100%;
+
+@media (min-width: 768px) {
+     min-width: 768px;   
+	}
+
+@media (min-width: 1440px) {
+	display: flex;
+	min-width: 1440px;
+	flex-direction: row;
+	width: 100%;
+	margin: 0 auto;
+	}
+}

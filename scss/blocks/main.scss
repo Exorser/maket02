@@ -1,0 +1,355 @@
+$main-background-color: #F8F8F8;
+$main-color: #7E7E82;
+$main-active-color: #FFFFFF;
+$link-color: #41F6D7;
+$main_section-color: #D9FFF5;
+$text-color: #1B1C21;
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $main-background-color;
+    padding-top: 24px;
+  
+    @media (min-width: 768px) {
+        gap: 32px;
+    }
+
+    @media (min-width: 1440px) {
+        gap: 50px;
+        width: 100%;
+        padding-top: 42px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+    }
+    
+    &__navigation {
+        padding-left: 16px;
+        overflow-x: overlay;
+
+        @media (min-width: 768px) {
+            padding-left: 24px;
+        }
+
+        @media (min-width: 1440px) { 
+            padding: 0 22px 0 34px;
+            overflow: visible;  
+        }
+    
+    
+        &-list {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 1140px;  
+            
+            @media (min-width: 1440px) { 
+                width: 100%;
+            }
+        }
+        
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        
+        &-item {
+            text-align: center;
+            margin-bottom: 8px;
+            margin-top: 8px;
+        }
+        
+        &-item:not(:last-child) {
+            margin-right: 3px;
+        }
+        
+        &-link {
+            letter-spacing: -0.2px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $main-color;
+            padding: 8px 9px 8px 16px;
+            text-decoration: none;
+            border: 2px solid transparent; 
+        
+
+            &.active {
+                letter-spacing: -0.2px;
+                font-size: 16px;
+                line-height: 24px;
+                color: $main-color;
+                padding: 8px 9px 8px 16px;
+                text-decoration: none;
+                background: $main-active-color;
+                border: 2px solid #B8FFEC;
+                border-radius: 6px; 
+                outline: none;  
+            }
+            
+            &:focus,
+            &:active {
+                background: $main-active-color;
+                border: 2px solid #B8FFEC;
+                border-radius: 6px; 
+                color: #7E7E82;
+                outline: none; 
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (min-width: 768px) {
+            gap: 32px;
+        }
+
+        @media (min-width: 1440px) { 
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    &__description {
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                gap: 48px;
+                padding: 0 24px 0 24px;
+            }
+    
+            @media (min-width: 1440px) { 
+                padding: 0 29px 0 34px;
+                gap: 32px;
+                justify-content: space-between;
+            }
+        }
+
+        
+    
+        &-text {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+            color: $text-color;
+        }
+        
+        &-size {
+            height: 90px;
+            overflow: hidden;
+
+            @media (min-width: 768px) {
+                min-width: 312px;
+                height: 160px;
+            }
+
+            @media (min-width: 1440px) { 
+                max-width: 490px;
+                height: 160px;
+            }
+        }
+        
+        &-about {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 16px 0 16px;
+
+            @media (min-width: 768px) {
+                padding: 0;
+                gap: 10px;
+            }
+
+            @media (min-width: 1440px) {
+                min-width: 490px;
+                padding: 0;
+                gap: 14px;
+            }
+        }
+        
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media (min-width: 768px) {
+                gap: 22px;
+            }
+
+            @media (min-width: 1440px) { 
+                gap: 20px;
+            } 
+        }
+
+        &-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width: 768px) {
+                height: 208px;
+                width: 360px;
+                border-radius: 6px;
+            }
+
+            @media (min-width: 1440px) {
+                height: 307px;
+                width: 531px;
+            }   
+        }
+
+        @media (min-width: 768px) {
+            &-item {
+                line-height: 20px;
+            }   
+        }
+
+        @media (min-width: 1440px) { 
+            &-image {
+                width: 532px;
+                height: 307px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media (min-width: 768px) {
+            gap: 24px;
+        }
+    
+        &::before {
+            content: '';
+            display: block;
+            max-width: 1120px;
+            height: 1px;
+            background-color: $main_section-color; 
+        }
+        
+        &-header {
+            padding: 16px;
+            margin-top: -16px;
+            background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+
+            @media (min-width: 768px) {
+                padding: 16px 24px;
+                margin-top: -24px;
+            }
+
+            @media (min-width: 1440px) {
+                padding: 16px 32px;
+            }
+        }
+        
+        &-title {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+        
+        &-list {
+            display: flex;
+            gap: 16px;
+            padding-left: 16px;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                gap: 16px 24px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                overflow: hidden;    
+            }
+
+            @media (min-width: 1440px) {
+                gap: 16px 32px;
+            }
+        }
+
+        &-link {
+            background-color: $main-active-color;
+            border: 1px solid #EAEAEA;
+            box-sizing: border-box;
+            border-radius: 6px;
+            padding:  0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            
+            &:hover {
+                border-color: $link-color;
+            }
+            
+            &:active {
+                background-color: $link-color;
+            }
+            
+            &:after {
+                content: '';
+                width: 40px;
+                height: 40px;
+                background: url('../img/brands-go.svg') no-repeat 0 0;
+            }
+        }
+        
+        &-item {
+            width: 240px;
+
+            @media (min-width: 768px) {
+                width: 224px;
+            }
+
+            @media (min-width: 1440px) {
+                width: 239px;
+            }
+        }
+        
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        
+        &_btn {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: flex;
+                gap: 9px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media (min-width: 768px) {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    }
+}

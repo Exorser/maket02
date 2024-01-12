@@ -1,0 +1,38 @@
+.swiper-pagination {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    justify-content: center;
+    z-index: 9;
+  }
+
+  .swiper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    height: 12px;
+    width: 12px;
+  }
+
+  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 0;
+  }
+  
+  .swiper-notification {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .swiper-slide {
+       height: auto;
+    }
+
+    .swiper-pagination {
+       overflow: hidden;
+       display: none;
+    }
+  }

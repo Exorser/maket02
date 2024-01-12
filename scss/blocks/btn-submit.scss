@@ -1,0 +1,31 @@
+$btn-background-color: #FF3E79;
+$btn-background-hover-color:rgba(255, 62, 121, 0.6);
+$btn-background-active-color:rgba(255, 62, 121, 0.3);
+$text-color: #fff;
+
+.btn-submit {
+  
+    cursor: pointer;
+    border: none;
+    background-color: $btn-background-color;
+    border-radius: 16px;
+  
+  &-text {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+  
+  &:hover {
+    background-color: $btn-background-hover-color;
+  }
+  
+  &:active {
+    background-color: $btn-background-active-color;
+  }
+}

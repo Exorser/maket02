@@ -1,0 +1,29 @@
+$color-btn: #1B1C21;
+
+.button {
+
+    border: none;
+    cursor: pointer;
+  
+    &-more {
+        border: none;
+        background-color: inherit;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $color-btn;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-family: 'TTLAkes', sans-serif;
+        font-weight: 700;
+
+        &::before {
+            content: '';
+            background: url('../img/icon-read-more.svg') no-repeat center center;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

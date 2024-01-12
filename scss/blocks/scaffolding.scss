@@ -1,0 +1,28 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --swiper-theme-color: #B5B6BC;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+body {
+  font-family: 'TTLAkes', sans-serif;
+  position: relative;
+  width: 100%;
+}
