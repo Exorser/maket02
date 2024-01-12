@@ -61,7 +61,7 @@ header {
 .header::after {
   content: '';
   display: block;
-  max-width: 1120px;
+  max-width: 1440px;
   height: 1px;
   background-color: #D9FFF5;
 }
