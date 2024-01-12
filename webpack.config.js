@@ -64,8 +64,8 @@ const optimization = () => {
 const plugins = () => {
     const basePlugins = [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './index.html'),
-            filename: './index.html',
+            template: path.resolve(__dirname, 'src/index.html'),
+            filename: 'index.html',
             minify: {
                 collapseWhitespace: isProd
             },
@@ -76,7 +76,7 @@ const plugins = () => {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, './assets'), to: path.resolve(__dirname, 'app/assets'),
+                    from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'app/assets'),
                 }
             ]
         }),
@@ -87,7 +87,7 @@ const plugins = () => {
 
 module.exports = {
     mode: 'development',
-    context: path.resolve(__dirname, ''),
+    context: path.resolve(__dirname, 'src'),
     entry: './js/main.js',
     output: {
         filename: `./js/${filename('js')}`,
