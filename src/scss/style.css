@@ -266,8 +266,9 @@ header {
   opacity: 0.6;
 }
 
-.side-menu__bottom-language_btn:active,
-.language-active {
+
+.side-menu__bottom-language_btn,
+.side-menu__bottom-language_btn.active {
   color: #7E7E82;
 }
 
@@ -540,6 +541,8 @@ header {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  height: auto;
 }
 
 .swiper-pagination {
@@ -1225,6 +1228,12 @@ header {
   .footer__text:last-child {
     text-align: end;
     width: 213px;
+  }
+}
+
+@media (min-width: 913px) {
+  .button-more, .button-more::before {
+    display: none;
   }
 }
 

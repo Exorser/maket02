@@ -1,24 +1,54 @@
-let mySwiper;
-function initSwiper() {
-  const screenWidth = document.body.clientWidth;
-  if ((screenWidth < 768) && (mySwiper == undefined)) {
-    mySwiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
+const initSwiper = () => {
+  const mediaQueryList = window.matchMedia("(max-width: 767px)");
+  let swiper = null;
+
+  const createSwiper = () => {
+    swiper = new Swiper(".swiper-container", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+        el: ".swiper-pagination",
+        type: "bullets",
         clickable: true,
       },
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: false,
     });
-  } if ((screenWidth >= 768) && (mySwiper !== undefined)) {
-    for (let i = 0; i < mySwiper.length; i++) {
-    mySwiper[i].destroy(true, true);  
-  }
-    mySwiper = undefined;
-      }
-    }
-initSwiper();
+  };
 
-window.addEventListener('resize', function() {
-  initSwiper();
-});
+  const destroySwiper = () => {
+    if (swiper) {
+      swiper.destroy();
+      swiper = null; // Reset the swiper variable
+    }
+  };
+
+  const handleMediaQueryChange = (e) => {
+    if (e.matches) {
+      createSwiper();
+    } else {
+      destroySwiper();
+    }
+  };
+
+  mediaQueryList.addEventListener("change", handleMediaQueryChange);
+
+  // Initial check for the media query
+  handleMediaQueryChange(mediaQueryList);
+
+
+  // Функция для проверки разрешения экрана и обновления страницы при достижении 768px
+  const checkResolutionAndReload = () => {
+    if (window.innerWidth >= 768) {
+      location.reload();
+    }
+  };
+  
+  window.addEventListener('resize', () => {
+    checkResolutionAndReload();
+  })
+}
+initSwiper();

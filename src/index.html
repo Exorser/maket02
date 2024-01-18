@@ -121,7 +121,7 @@
         </div>
         <ul class="side-menu__bottom-languages">
           <li class="side-menu__bottom-language">
-            <button class="side-menu__bottom-language_btn language-active">ru</button>
+            <button class="side-menu__bottom-language_btn active">ru</button>
           </li>
           <li class="side-menu__bottom-language">
             <button class="side-menu__bottom-language_btn">en</button>
@@ -283,6 +283,16 @@
                     <span class="main__section-link-text devices__link-text">Ремонт мониторов</span>
                   </a>
                 </li>
+                <li class="main__section-item devices__item swiper-slide">
+                  <a href="#" class="main__section-link devices__link">
+                    <span class="main__section-link-text devices__link-text">Ремонт имплантов</span>
+                  </a>
+                </li>
+                <li class="main__section-item devices__item swiper-slide">
+                  <a href="#" class="main__section-link devices__link">
+                    <span class="main__section-link-text devices__link-text">Ремонт наушников</span>
+                  </a>
+                </li>
               </ul>
               <div class="swiper-pagination"></div>
               <button class="main__section_btn  main__description-read-more button-more">Показать все</button>
@@ -425,12 +435,12 @@
       </div>
       <div class="modal--about">
         <h3 class="modal__title title">Обратная связь</h3>
-        <form class="form" action="#" method="post">
+        <form class="form" action="#">
           <div class="form__information">
             <input class="form__input form__input--design" type="text" name="name" id="name" required="required"
               placeholder="Имя">
-            <input class="form__input form__input--design" type="tel" name="tel" id="phone" placeholder="Телефон"
-              required="required">
+              <input class="form__input form__input--design" type="tel" name="tel" pattern="[0-9]*" id="phone" placeholder="Телефон"
+               required="required">
             <input class="form__input form__input--design" type="email" name="mail" id="mail" placeholder="Электронная почта"
               required="required">
             <textarea class="form__message form__input--design" placeholder="Сообщение" required></textarea>
@@ -453,9 +463,9 @@
         </div>
         <div class="modal--about">
         <h3 class="modal__title title">Заказать звонок</h3>
-        <form class="form" action="#" method="post">
+        <form class="form" action="#">
           <div class="form__information">
-            <input class="form__input form__input--design" type="tel" name="tel" id="phone" placeholder="Телефон"
+            <input class="form__input form__input--design" type="tel" name="tel" pattern="[0-9]{11}" id="phone" placeholder="Телефон"
               required="required">
             <div class="form__submit">
               <p class="form__submit-info">Нажимая “отправить”, вы даете согласие на <a href="#"

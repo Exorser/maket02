@@ -20,3 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const linkeds = document.querySelectorAll(".side-menu__bottom-language_btn");
+
+  linkeds.forEach(linked => {
+    linked.addEventListener("click", function() {
+      linkeds.forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+});
+
+
+

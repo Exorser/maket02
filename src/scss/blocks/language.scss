@@ -1,5 +1,6 @@
 $language-color: #7E7E82;
 
-.language-active {
+.side-menu__bottom-language_btn:active,
+.side-menu__bottom-language_btn.active {
     color: $language-color;
   }

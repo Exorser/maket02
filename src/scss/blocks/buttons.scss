@@ -24,6 +24,12 @@ $color-btn: #1B1C21;
             background: url('../img/icon-read-more.svg') no-repeat center center;
             width: 24px;
             height: 24px;
+
+          
+        }
+
+        @media (min-width: 913px) {
+            display: none;
         }
     }
 }
