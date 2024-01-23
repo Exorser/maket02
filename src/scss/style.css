@@ -147,7 +147,7 @@ header {
   height: 100%;
   position: absolute;
   background: #fff;
-  max-width: 360px;
+  max-width: 100%;
   top: 0;
   left: 0;
   transform: translateX(-100%);
@@ -824,7 +824,7 @@ header {
   -o-transition: transform 0.2s;
   display: flex;
   gap: 32px;
-  max-width: 320px;
+  max-width: 100%;
   flex-direction: column;
   align-items: flex-start;
   height: 100%;
@@ -851,7 +851,7 @@ header {
   display: flex;
   gap: 24px;
   flex-direction: column;
-  max-width: 320px;
+  max-width: 100%;
   box-shadow: none;
   height: 100%;
 }
@@ -1229,6 +1229,10 @@ header {
     text-align: end;
     width: 213px;
   }
+
+  .modal, .modal--about {
+    max-width: 320px;
+  }
 }
 
 @media (min-width: 913px) {
@@ -1450,3 +1454,5 @@ header {
     padding: 0 32px;
   }
 }
+
+

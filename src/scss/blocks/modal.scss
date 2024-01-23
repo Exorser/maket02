@@ -17,11 +17,15 @@ $modal-background-color: #fff;
     -o-transition: transform 0.2s;
     display: flex;
     gap: 32px;
-    max-width: 320px;
+    max-width: 100%;
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 10px 0px 30px rgba(14, 24, 80, 0.2);
+
+    @media (min-width: 768px) { 
+        max-width: 320px;
+    }
 
     @media (min-width: 1440px) { 
         max-width: 513px;
@@ -57,9 +61,13 @@ $modal-background-color: #fff;
         display: flex;
         gap: 24px;
         flex-direction: column;
-        max-width: 320px;
+        max-width: 100%;
         box-shadow: none;
         height: 100%;
+
+        @media (min-width: 768px) { 
+            max-width: 320px;
+        }
 
         @media (min-width: 1440px) { 
             max-width: 440px;

@@ -7,7 +7,7 @@ $side-menu-link-background-color: #41F6D7;
     height: 100%;
     position: absolute;
     background: $side-menu-background-color;
-    max-width: 360px;
+    max-width: 100%;
     top: 0;
     left: 0;
     transform: translateX(-100%);
@@ -23,7 +23,7 @@ $side-menu-link-background-color: #41F6D7;
     font-weight: 700;
 
     @media (min-width: 768px) {
-        width: 320px;
+        max-width: 320px;
     }
 
     @media (min-width: 1440px) {
